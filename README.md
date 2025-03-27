@@ -20,7 +20,7 @@ A Minecraft survival multiplayer server focused on building a thriving community
 
 ## Getting Started
 
-1. Connect to the server using: `play.springfieldhaven.com`
+1. Connect to the server using: `alphabetagamma.exaroton.me`
 2. Read the rules at spawn
 3. Find a nice spot to build
 4. Join our Discord community: [Discord Invite Link]
