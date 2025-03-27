@@ -1,4 +1,14 @@
-# Springfield Haven SMP
+<p align="center">
+  <a href="#">
+    <img src="https://img.shields.io/badge/Springfield_Haven_SMP-GreenBugX-8A2BE2?style=for-the-badge&logo=insects&logoColor=white&labelColor=darkgreen&color=green&labelWidth=400&logoWidth=40" alt="Scrape!" style="transform: scale(1.5); margin: 10px 0;" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,tailwind,vscode,astro" />
+  </a>
+</p>
 
 A Minecraft survival multiplayer server focused on building a thriving community in Springfield.
 
