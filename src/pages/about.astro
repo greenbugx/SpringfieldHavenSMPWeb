@@ -1,0 +1,145 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/navigation/Navbar.astro';
+import Footer from '../components/navigation/Footer.astro';
+import ScrollAnimation from '../components/shared/ScrollAnimation.astro';
+
+const serverFeatures = [
+  {
+    title: "Survival Experience",
+    description: "Pure survival gameplay with minimal plugins to enhance your experience without breaking vanilla mechanics.",
+    icon: "🏗️"
+  },
+  {
+    title: "Community Focused",
+    description: "Active and friendly community where players help each other and build together.",
+    icon: "👥"
+  },
+  {
+    title: "Regular Events",
+    description: "Weekly building competitions, treasure hunts, and special seasonal events.",
+    icon: "🎮"
+  },
+  {
+    title: "Fair Play",
+    description: "Strong anti-cheat and grief protection to ensure a fair playing field for everyone.",
+    icon: "⚖️"
+  }
+];
+
+const staffMembers = [
+  {
+    name: "PlayerOne",
+    role: "Owner",
+    description: "Server founder and main administrator"
+  },
+  {
+    name: "PlayerTwo",
+    role: "Admin",
+    description: "Community manager and event organizer"
+  },
+  {
+    name: "PlayerThree",
+    role: "Moderator",
+    description: "Helps maintain server rules and assists players"
+  }
+];
+---
+
+<MainLayout title="About Us">
+  <Navbar slot="header" />
+  
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Hero Section -->
+    <ScrollAnimation>
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-mcgreen mb-4">About Springfield Haven SMP</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          A community-driven Minecraft server where players come together to build, survive, and create amazing memories.
+        </p>
+      </div>
+    </ScrollAnimation>
+
+    <!-- Server Features -->
+    <ScrollAnimation delay={200}>
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-mcgreen mb-8 text-center">Server Features</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 cursor-pointer">
+          {serverFeatures.map((feature) => (
+            <div class="bg-stone-800 p-6 rounded-lg hover:transform hover:scale-105 transition-transform duration-300">
+              <div class="text-4xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-mcgreen mb-2">{feature.title}</h3>
+              <p class="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </ScrollAnimation>
+
+    <!-- Staff Team -->
+    <ScrollAnimation delay={400}>
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-mcgreen mb-8 text-center">Our Staff Team</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {staffMembers.map((member) => (
+            <div class="bg-stone-800 p-6 rounded-lg text-center">
+              <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-mcgreen flex items-center justify-center">
+                <span class="text-2xl">👤</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-1">{member.name}</h3>
+              <div class="text-mcgreen mb-2">{member.role}</div>
+              <p class="text-gray-300">{member.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </ScrollAnimation>
+
+    <!-- Server Rules Preview -->
+    <ScrollAnimation delay={600}>
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-mcgreen mb-8 text-center">Our Values</h2>
+        <div class="bg-stone-800 p-8 rounded-lg">
+          <ul class="space-y-4 text-gray-300">
+            <li class="flex items-center">
+              <span class="text-mcgreen mr-2">✓</span>
+              Respect all players and staff members
+            </li>
+            <li class="flex items-center">
+              <span class="text-mcgreen mr-2">✓</span>
+              No griefing or stealing from other players
+            </li>
+            <li class="flex items-center">
+              <span class="text-mcgreen mr-2">✓</span>
+              Keep the environment clean and beautiful
+            </li>
+            <li class="flex items-center">
+              <span class="text-mcgreen mr-2">✓</span>
+              Help new players and contribute to the community
+            </li>
+          </ul>
+          <div class="mt-6 text-center">
+            <a href="/rules" class="inline-block bg-mcgreen hover:bg-mcwood text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out shadow-md hover:shadow-mcdirt hover:scale-105">
+              View Full Rules
+            </a>
+          </div>
+        </div>
+      </section>
+    </ScrollAnimation>
+
+    <!-- Join Us CTA -->
+    <ScrollAnimation delay={800}>
+      <section class="text-center">
+        <h2 class="text-3xl font-bold text-mcgreen mb-4">Ready to Join Us?</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Become part of our growing community today!
+        </p>
+        <a href="https://discord.gg/yourserver" class="inline-block bg-mcgreen hover:bg-mcwood text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out shadow-md hover:shadow-mcdirt hover:scale-105">
+          Join Our Discord
+        </a>
+      </section>
+    </ScrollAnimation>
+  </div>
+
+  <Footer slot="footer" />
+</MainLayout>

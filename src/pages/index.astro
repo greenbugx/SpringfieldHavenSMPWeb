@@ -4,12 +4,11 @@ import Navbar from '../components/navigation/Navbar.astro';
 import Hero from '../components/home/hero.astro';
 import Features from '../components/home/Features.astro';
 import ServerStatus from '../components/home/ServerStatus.astro';
-import News from '../components/home/News.astro';
+import AboutPreview from '../components/home/AboutPreview.astro';
 import Stats from '../components/home/Stats.astro';
 import GalleryPreview from '../components/home/GalleryPreview.astro';
 import Discord from '../components/home/Discord.astro';
 import Footer from '../components/navigation/Footer.astro';
-import ScrollAnimation from '../components/shared/ScrollAnimation.astro';
 ---
 
 <MainLayout title="Welcome">
@@ -18,29 +17,12 @@ import ScrollAnimation from '../components/shared/ScrollAnimation.astro';
   <Hero />
   
   <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-    <ScrollAnimation delay={0}>
-      <ServerStatus />
-    </ScrollAnimation>
-
-    <ScrollAnimation delay={200}>
-      <Stats />
-    </ScrollAnimation>
-
-    <ScrollAnimation delay={400} direction="left">
-      <Features />
-    </ScrollAnimation>
-
-    <ScrollAnimation delay={600}>
-      <News />
-    </ScrollAnimation>
-
-    <ScrollAnimation delay={800} direction="right">
-      <GalleryPreview />
-    </ScrollAnimation>
-
-    <ScrollAnimation delay={1000}>
-      <Discord />
-    </ScrollAnimation>
+    <ServerStatus />
+    <Stats />
+    <AboutPreview />
+    <Features />
+    <GalleryPreview />
+    <Discord />
   </div>
 
   <Footer slot="footer" />

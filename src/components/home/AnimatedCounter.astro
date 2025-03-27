@@ -7,12 +7,15 @@ interface Props {
 const { value, delay = 0 } = Astro.props;
 ---
 
-<div class="text-4xl font-bold text-mcgreen mb-2" data-value={value} data-delay={delay}>
+<div class="text-4xl font-bold text-mcgreen mb-2" data-value={value} data-delay={delay} data-animated="false">
   {value}
 </div>
 
 <script>
   function animateValue(element: HTMLElement) {
+    // Check if already animated
+    if (element.getAttribute('data-animated') === 'true') return;
+    
     const value = element.getAttribute('data-value') || '0';
     const delay = parseInt(element.getAttribute('data-delay') || '0');
     const numericValue = parseInt(value.replace(/[^0-9]/g, ''));
@@ -30,6 +33,8 @@ const { value, delay = 0 } = Astro.props;
           requestAnimationFrame(animate);
         } else {
           element.textContent = value;
+          // Mark as animated
+          element.setAttribute('data-animated', 'true');
         }
       };
       
