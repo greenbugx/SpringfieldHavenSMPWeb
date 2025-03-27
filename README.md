@@ -6,11 +6,15 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,tailwind,vscode,astro" />
+    <img src="https://skillicons.dev/icons?i=git,tailwind,vscode,astro,js" />
   </a>
 </p>
 
-A Minecraft survival multiplayer server focused on building a thriving community in Springfield.
+<p align="center">
+    <b>
+        A Minecraft survival multiplayer server focused on building a thriving community in Springfield.
+    </b>
+</p>
 
 ## Features
 
@@ -46,9 +50,9 @@ Want to help improve the server? Here's how you can contribute:
 
 ## Contact
 
-- Discord: [Discord Invite Link]
-- Email: admin@springfieldhaven.com
-- Website: www.springfieldhaven.com
+- Discord: N/A
+- Email: N/A
+- Website: https://springfieldhavensmp.minecraft.pe
 
 ## Support
 
