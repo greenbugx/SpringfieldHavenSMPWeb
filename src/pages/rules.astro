@@ -1,0 +1,125 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/navigation/Navbar.astro';
+import Footer from '../components/navigation/Footer.astro';
+import ScrollAnimation from '../components/shared/ScrollAnimation.astro';
+
+const ruleCategories = [
+  {
+    title: "General Rules",
+    rules: [
+      "Respect all players and staff members",
+      "No harassment, hate speech, or inappropriate behavior",
+      "Use appropriate language in chat",
+      "No spam or excessive caps",
+      "Keep discussions friendly and constructive"
+    ]
+  },
+  {
+    title: "Gameplay Rules",
+    rules: [
+      "No griefing or stealing from other players",
+      "No cheating, hacks, or mods that give unfair advantages",
+      "No exploiting bugs or glitches",
+      "Respect other players' builds and property",
+      "Keep the environment clean and beautiful"
+    ]
+  },
+  {
+    title: "Building Rules",
+    rules: [
+      "No inappropriate or offensive builds",
+      "No excessive redstone contraptions that cause lag",
+      "Keep builds within reasonable size limits",
+      "No floating structures without proper support",
+      "Respect spawn area and community spaces"
+    ]
+  },
+  {
+    title: "Community Guidelines",
+    rules: [
+      "Help new players and contribute to the community",
+      "Report bugs and issues to staff",
+      "Participate in community events when possible",
+      "Share your builds and creations with others",
+      "Follow staff instructions and warnings"
+    ]
+  }
+];
+
+const punishments = [
+  { offense: "Minor Rule Violation", action: "Warning" },
+  { offense: "Repeated Warnings", action: "Temporary Mute" },
+  { offense: "Griefing/Theft", action: "Temporary Ban" },
+  { offense: "Major Rule Violation", action: "Permanent Ban" }
+];
+---
+
+<MainLayout title="Server Rules">
+  <Navbar slot="header" />
+
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <ScrollAnimation>
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-mcgreen mb-4">Server Rules</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Please read and follow these rules to ensure a great experience for everyone.
+        </p>
+      </div>
+    </ScrollAnimation>
+
+    <!-- Rule Categories -->
+    <div class="space-y-16">
+      {ruleCategories.map((category, index) => (
+        <ScrollAnimation delay={index * 200}>
+          <section class="bg-stone-800 rounded-lg p-8">
+            <h2 class="text-2xl font-bold text-mcgreen mb-6">{category.title}</h2>
+            <ul class="space-y-4">
+              {category.rules.map((rule) => (
+                <li class="flex items-start">
+                  <span class="text-mcgreen mr-3 mt-1">✓</span>
+                  <span class="text-gray-300">{rule}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </ScrollAnimation>
+      ))}
+    </div>
+
+    <!-- Punishment System -->
+    <ScrollAnimation delay={800}>
+      <section class="mt-16">
+        <h2 class="text-3xl font-bold text-mcgreen mb-8 text-center">Punishment System</h2>
+        <div class="bg-stone-800 rounded-lg p-8">
+          <div class="grid md:grid-cols-2 gap-8">
+            {punishments.map((punishment) => (
+              <div class="flex items-center justify-between p-4 bg-stone-700 rounded-lg">
+                <span class="text-gray-300">{punishment.offense}</span>
+                <span class="text-mcgreen font-bold">{punishment.action}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </ScrollAnimation>
+
+    <!-- Additional Information -->
+    <ScrollAnimation delay={1000}>
+      <section class="mt-16 text-center">
+        <h2 class="text-2xl font-bold text-mcgreen mb-4">Need Help?</h2>
+        <p class="text-gray-300 mb-8">
+          If you have any questions about the rules or need to report a violation, please contact our staff team.
+        </p>
+        <a
+          href="/contact"
+          class="inline-block bg-mcgreen hover:bg-mcwood text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out shadow-md hover:shadow-mcdirt hover:scale-105"
+        >
+          Contact Staff
+        </a>
+      </section>
+    </ScrollAnimation>
+  </div>
+
+  <Footer slot="footer" />
+</MainLayout>

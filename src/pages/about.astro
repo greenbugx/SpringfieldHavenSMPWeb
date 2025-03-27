@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Navbar from '../components/navigation/Navbar.astro';
 import Footer from '../components/navigation/Footer.astro';
 import ScrollAnimation from '../components/shared/ScrollAnimation.astro';
+import Discord from '../components/home/Discord.astro';
 
 const serverFeatures = [
   {
@@ -29,17 +30,17 @@ const serverFeatures = [
 
 const staffMembers = [
   {
-    name: "PlayerOne",
+    name: "Krishnav Charingia (Captain America)",
     role: "Owner",
     description: "Server founder and main administrator"
   },
   {
-    name: "PlayerTwo",
+    name: "Dave",
     role: "Admin",
     description: "Community manager and event organizer"
   },
   {
-    name: "PlayerThree",
+    name: "N/A",
     role: "Moderator",
     description: "Helps maintain server rules and assists players"
   }
@@ -130,13 +131,7 @@ const staffMembers = [
     <!-- Join Us CTA -->
     <ScrollAnimation delay={800}>
       <section class="text-center">
-        <h2 class="text-3xl font-bold text-mcgreen mb-4">Ready to Join Us?</h2>
-        <p class="text-xl text-gray-300 mb-8">
-          Become part of our growing community today!
-        </p>
-        <a href="https://discord.gg/yourserver" class="inline-block bg-mcgreen hover:bg-mcwood text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out shadow-md hover:shadow-mcdirt hover:scale-105">
-          Join Our Discord
-        </a>
+        <Discord />
       </section>
     </ScrollAnimation>
   </div>

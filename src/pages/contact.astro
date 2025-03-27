@@ -1,0 +1,109 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/navigation/Navbar.astro';
+import Footer from '../components/navigation/Footer.astro';
+import ScrollAnimation from '../components/shared/ScrollAnimation.astro';
+import ContactForm from '../components/contact/ContactForm.astro';
+
+const contactMethods = [
+  {
+    title: "Discord",
+    description: "Join our Discord server for the fastest response",
+    icon: "🎮",
+    link: "https://discord.gg/UehcuZ4rNQ",
+    action: "Join Discord"
+  },
+  {
+    title: "In-Game",
+    description: "Contact staff members directly in-game",
+    icon: "🎮",
+    link: "https://add.exaroton.com/alphabetagamma",
+    action: "Join Server"
+  }
+];
+
+const faqItems = [
+  {
+    question: "How do I report a player?",
+    answer: "You can report players through our Discord server's #report channel or by contacting staff members in-game."
+  },
+  {
+    question: "What should I do if I find a bug?",
+    answer: "Please report bugs in our Discord's #bug-reports channel or create a ticket in our support system."
+  },
+  {
+    question: "How can I appeal a ban?",
+    answer: "Submit a ban appeal through our Discord server or send an email to appeals@springfieldhaven.com"
+  }
+];
+---
+
+<MainLayout title="Contact Us">
+  <Navbar slot="header" />
+
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <ScrollAnimation>
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-mcgreen mb-4">Contact Us</h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Need help? We're here to assist you with any questions or concerns.
+        </p>
+      </div>
+    </ScrollAnimation>
+
+    <!-- Contact Methods -->
+    <ScrollAnimation delay={200}>
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        {contactMethods.map((method) => (
+          <div class="bg-stone-800 p-6 rounded-lg text-center hover:transform hover:scale-105 transition-transform duration-300">
+            <div class="text-4xl mb-4">{method.icon}</div>
+            <h3 class="text-xl font-bold text-mcgreen mb-2">{method.title}</h3>
+            <p class="text-gray-300 mb-4">{method.description}</p>
+            <a
+              href={method.link}
+              class="inline-block bg-mcgreen hover:bg-mcwood text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 ease-in-out shadow-md hover:shadow-mcdirt hover:scale-105"
+            >
+              {method.action}
+            </a>
+          </div>
+        ))}
+      </div>
+    </ScrollAnimation>
+
+    <!-- Contact Form -->
+    <ScrollAnimation delay={400}>
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-mcgreen mb-8 text-center">Send Us a Message</h2>
+        <ContactForm />
+      </section>
+    </ScrollAnimation>
+
+    <!-- FAQ Section -->
+    <ScrollAnimation delay={600}>
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-mcgreen mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqItems.map((item) => (
+            <div class="bg-stone-800 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-white mb-2">{item.question}</h3>
+              <p class="text-gray-300">{item.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </ScrollAnimation>
+
+    <!-- Support Hours -->
+    <ScrollAnimation delay={800}>
+      <section class="text-center">
+        <h2 class="text-2xl font-bold text-mcgreen mb-4">Support Hours</h2>
+        <div class="bg-stone-800 p-6 rounded-lg inline-block">
+          <p class="text-gray-300">Monday - Friday: 9:00 AM - 9:00 PM UTC</p>
+          <p class="text-gray-300">Saturday - Sunday: 10:00 AM - 8:00 PM UTC</p>
+        </div>
+      </section>
+    </ScrollAnimation>
+  </div>
+
+  <Footer slot="footer" />
+</MainLayout>
