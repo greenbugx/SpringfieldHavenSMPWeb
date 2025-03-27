@@ -1,0 +1,23 @@
+---
+import AnimatedCounter from './AnimatedCounter.astro';
+
+const stats = [
+  { label: "Active Players", value: "50+" },
+  { label: "Server Uptime", value: "99.9%" },
+  { label: "Community Size", value: "1000+" },
+  { label: "Builds Created", value: "500+" }
+];
+---
+
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.map((stat, index) => (
+        <div class="text-center animate-fade-in-up" style={`animation-delay: ${index * 100}ms`}>
+          <AnimatedCounter value={stat.value} delay={index * 200} />
+          <div class="text-mcstone">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

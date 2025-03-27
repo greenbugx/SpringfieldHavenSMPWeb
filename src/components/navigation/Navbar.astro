@@ -1,0 +1,33 @@
+---
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Rules', href: '/rules' },
+  { name: 'Gallery', href: '/gallery' },
+  { name: 'Store', href: '/store' },
+];
+---
+
+<nav class="border-b border-mcgreen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex-shrink-0">
+        <a href="/" class="text-mcgreen font-bold text-xl hover:scale-110 transition-all duration-300 hover:text-mcgreen hover:drop-shadow-[0_0_10px_rgba(0,255,0,0.5)] inline-block">
+          Springfield Haven SMP
+        </a>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-center space-x-4">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-gray-300 hover:text-mcgreen px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

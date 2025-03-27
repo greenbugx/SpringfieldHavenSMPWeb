@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import image from "../../assets/d78f9467-6131-4ce3-bdce-fa1ebb5180f8.png"
+---
+
+<section class="relative h-[600px] flex items-center justify-center">
+  <div class="absolute inset-0 overflow-hidden">
+    <Image 
+      src={image} 
+      alt="Minecraft background"
+      class="w-full h-full object-cover opacity-50"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-stone-900"></div>
+  </div>
+  
+  <div class="relative z-10 text-center px-4">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
+      Springfield Haven SMP
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 text-gray-200">
+      Join our amazing Minecraft community!
+    </p>
+    <div class="space-y-4 md:space-y-0 md:space-x-4">
+      <button class="bg-mcgreen hover:bg-mcwood text-white font-bold py-3 px-8 rounded-lg transition-colors cursor-pointer">
+        Join Now
+      </button>
+    </div>
+  </div>
+</section>

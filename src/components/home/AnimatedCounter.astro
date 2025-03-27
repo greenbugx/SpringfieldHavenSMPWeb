@@ -1,0 +1,52 @@
+---
+interface Props {
+  value: string;
+  delay?: number;
+}
+
+const { value, delay = 0 } = Astro.props;
+---
+
+<div class="text-4xl font-bold text-mcgreen mb-2" data-value={value} data-delay={delay}>
+  {value}
+</div>
+
+<script>
+  function animateValue(element: HTMLElement) {
+    const value = element.getAttribute('data-value') || '0';
+    const delay = parseInt(element.getAttribute('data-delay') || '0');
+    const numericValue = parseInt(value.replace(/[^0-9]/g, ''));
+    const suffix = value.replace(/[0-9]/g, '');
+    
+    setTimeout(() => {
+      let current = 0;
+      const duration = 2000; // 2 seconds
+      const step = numericValue / (duration / 16); // 60fps
+      
+      const animate = () => {
+        current += step;
+        if (current < numericValue) {
+          element.textContent = Math.floor(current) + suffix;
+          requestAnimationFrame(animate);
+        } else {
+          element.textContent = value;
+        }
+      };
+      
+      animate();
+    }, delay);
+  }
+
+  // Initialize all counters when they come into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateValue(entry.target as HTMLElement);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-value]').forEach(counter => {
+    observer.observe(counter);
+  });
+</script>

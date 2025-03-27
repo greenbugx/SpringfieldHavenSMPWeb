@@ -1,48 +1,52 @@
-# Astro Starter Kit: Basics
+# Springfield Haven SMP
 
-```sh
-npm create astro@latest -- --template basics
-```
+A Minecraft survival multiplayer server focused on building a thriving community in Springfield.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Survival gameplay with minimal plugins
+- Community-focused environment
+- Regular events and activities
+- Protected spawn area
+- Player-driven economy
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Rules
 
-## 🚀 Project Structure
+1. No griefing or stealing
+2. Be respectful to all players
+3. No cheating or using exploits
+4. Keep chat family-friendly
+5. No spamming or excessive advertising
 
-Inside of your Astro project, you'll see the following folders and files:
+## Getting Started
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. Connect to the server using: `play.springfieldhaven.com`
+2. Read the rules at spawn
+3. Find a nice spot to build
+4. Join our Discord community: [Discord Invite Link]
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Contributing
 
-## 🧞 Commands
+Want to help improve the server? Here's how you can contribute:
 
-All commands are run from the root of the project, from a terminal:
+- Report bugs and issues
+- Suggest new features
+- Participate in community events
+- Help new players
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contact
 
-## 👀 Want to learn more?
+- Discord: [Discord Invite Link]
+- Email: admin@springfieldhaven.com
+- Website: www.springfieldhaven.com
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Support
+
+If you enjoy our server, consider supporting us through:
+- Voting for the server
+- Donating to help with server costs
+- Inviting friends to join
+
+---
+
+Made with ❤️ by the Springfield Haven Team
